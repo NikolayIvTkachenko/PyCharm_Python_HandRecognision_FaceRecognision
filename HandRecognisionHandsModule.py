@@ -49,7 +49,7 @@ class HandsDetector():
 
         return lmList
 
-def app_start():
+def  app_start_hand_recognision():
     cTime = 0
     pTime = 0
     detector = HandsDetector()
