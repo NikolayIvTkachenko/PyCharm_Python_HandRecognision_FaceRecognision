@@ -44,6 +44,11 @@ def faceRecognistionVersion01():
     results = face_recognition.compare_faces([encodeFace00], encodeFaceTest00)
     print(results)
 
+    faceDis = face_recognition.face_distance([encodeFace00], encodeFaceTest00)
+    print(faceDis)
+
+    cv2.putText(imgFace00, f'{results} {faceDis}', (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+
     # peopleLoc01 = face_recognition.face_locations(imgPeople01)[0]
     # encodePeople01 = face_recognition.face_encodings(imgPeople01)[0]
     # print(peopleLoc01)
